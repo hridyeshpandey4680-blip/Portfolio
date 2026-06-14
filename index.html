@@ -682,11 +682,14 @@
             <a href="https://wa.me/919430240185" class="btn btn-secondary" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
           </div>
 
-<form action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST" style="display: flex; flex-direction: column; gap: 16px;">
-  <input type="text" name="name" placeholder="Your Name" class="form-input" required>
-  <input type="email" name="email" placeholder="Email" class="form-input" required>
-  <textarea name="message" rows="4" placeholder="Message" class="form-input" required></textarea>
-  <button type="submit" class="btn btn-primary" style="justify-content: center;">Send Message</button>
+<form style="display: flex; flex-direction: column; gap: 16px;" id="contactForm">
+  <!-- Yahan apni mili hui Access Key paste kar dena -->
+  <input type="hidden" id="formAccessKey" value="81b0e004-1fc9-4861-9b3f-7dd03f06d42a">
+  
+  <input type="text" id="formName" placeholder="Your Name" class="form-input" required>
+  <input type="email" id="formEmail" placeholder="Email" class="form-input" required>
+  <textarea id="formMessage" rows="4" placeholder="Message" class="form-input" required></textarea>
+  <button type="submit" id="submitBtn" class="btn btn-primary" style="justify-content: center;">Send Message</button>
 </form>
         </div>
       </section>
@@ -702,6 +705,56 @@
         const loader = document.getElementById('loading-screen');
         loader.style.opacity = '0';
         setTimeout(() => loader.style.visibility = 'hidden', 600);
+        // Handle Contact Form Submission via Web3Forms API
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const accessKey = document.getElementById('formAccessKey').value;
+  const name = document.getElementById('formName').value;
+  const email = document.getElementById('formEmail').value;
+  const message = document.getElementById('formMessage').value;
+  const submitBtn = document.getElementById('submitBtn');
+
+  // Input check
+  if(accessKey === "81b0e004-1fc9-4861-9b3f-7dd03f06d42a") {
+    alert("Bhai, pehle formAccessKey ke value me apni actual Web3Forms key dalo!");
+    return;
+  }
+
+  // UI feedback during sending
+  submitBtn.innerText = "Sending... ⏳";
+  submitBtn.disabled = true;
+
+  // Form Data object creation
+  const formData = new FormData();
+  formData.append("access_key", accessKey);
+  formData.append("name", name);
+  formData.append("email", email);
+  formData.append("message", message);
+
+  // API Request send kar rhe hain
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      alert("🚀 Message successfully direct aapke email par bhej diya gaya hai!");
+      document.getElementById('contactForm').reset();
+    } else {
+      alert("⚠️ Kuch gadbad hui, kripya dobara koshish karein.");
+    }
+  })
+  .catch(error => {
+    console.error("Error:", error);
+    alert("❌ Network Error: Message send nahi ho paya.");
+  })
+  .finally(() => {
+    submitBtn.innerText = "Send Message";
+    submitBtn.disabled = false;
+  });
+});
       });
 
       // Typing effect
