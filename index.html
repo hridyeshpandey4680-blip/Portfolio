@@ -672,15 +672,82 @@
             <a href="https://wa.me/919430240185" class="btn btn-secondary" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
           </div>
 
-          <form style="display: flex; flex-direction: column; gap: 16px;">
-            <input type="text" placeholder="Your Name" class="form-input">
-            <input type="email" placeholder="Email" class="form-input">
-            <textarea rows="4" placeholder="Message" class="form-input"></textarea>
-            <button type="button" class="btn btn-primary" style="justify-content: center;" onclick="alert('🚀 Message processed successfully!')">Send Message</button>
-          </form>
-        </div>
-      </section>
+          <!-- Contact Section Form -->
+<form action="https://api.web3forms.com/submit" method="POST" id="portfolio-form">
+    
+    <!-- IMPORTANT: Yahan apni asli Web3Forms Access Key daalna mat bhulna -->
+    <input type="hidden" name="access_key" value="dcdc3665-ed48-43c6-a966-949041002f1e">
+    
+    <!-- Automatic Redirect ya Success page rokne ke liye taaki popup dikhe -->
+    <input type="hidden" name="redirect" value="">
 
+    <div class="form-group" style="margin-bottom: 15px;">
+        <label for="name" style="display: block; color: #fff; margin-bottom: 5px;">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your Name" style="width: 100%; padding: 10px; background: #111; color: #fff; border: 1px solid #333; border-radius: 5px;">
+    </div>
+
+    <div class="form-group" style="margin-bottom: 15px;">
+        <label for="email" style="display: block; color: #fff; margin-bottom: 5px;">Email</label>
+        <input type="email" id="email" name="email" required placeholder="yourname@gmail.com" style="width: 100%; padding: 10px; background: #111; color: #fff; border: 1px solid #333; border-radius: 5px;">
+    </div>
+
+    <div class="form-group" style="margin-bottom: 20px;">
+        <label for="message" style="display: block; color: #fff; margin-bottom: 5px;">Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Write your message here..." style="width: 100%; padding: 10px; background: #111; color: #fff; border: 1px solid #333; border-radius: 5px; resize: none;"></textarea>
+    </div>
+
+    <!-- Submit Button (Aap iski CSS styling apne theme ke hisaab se badal sakte hain) -->
+    <button type="submit" style="width: 100%; padding: 12px; background: #5c5470; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold;">
+        Send Message
+    </button>
+</form>
+
+<!-- JavaScript: Same to same image jaisa alert box laane ke liye -->
+<script>
+const form = document.getElementById('portfolio-form');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    // Form submit hote hi button par loading dikhane ke liye
+    const btn = form.querySelector('button');
+    btn.innerHTML = "Sending...";
+    btn.disabled = true;
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                // Bilkul aapke screenshot jaisa alert message
+                alert("🚀 Message processed successfully!");
+                form.reset();
+            } else {
+                console.log(response);
+                alert("Kuch gadbad hui: " + json.message);
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            alert("Network error! Baad me try karein.");
+        })
+        .then(function() {
+            // Button ko wapas normal karne ke liye
+            btn.innerHTML = "Send Message";
+            btn.disabled = false;
+        });
+});
+</script>
+        
     </div>
     <footer>© 2026 Hridyesh Kumar Pandey | AI & ML Portfolio.</footer>
   </div>
