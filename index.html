@@ -279,6 +279,31 @@
       flex-direction: column;
       justify-content: space-between;
     }
+    .cert-card {
+      padding: 18px;
+      gap: 16px;
+    }
+    .certificate-preview {
+      display: block;
+      width: 100%;
+      height: 230px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      background: #fff;
+    }
+    body.light-mode .certificate-preview {
+      border-color: rgba(15, 23, 42, 0.1);
+    }
+    .certificate-actions {
+      display: flex;
+      gap: 10px;
+    }
+    .certificate-actions .btn {
+      flex: 1;
+      justify-content: center;
+      padding: 9px 12px;
+      font-size: 0.82rem;
+    }
     .project-card:hover, .cert-card:hover {
       transform: translateY(-5px);
       border-color: rgba(110, 231, 255, 0.3);
@@ -465,17 +490,17 @@
               </ul>
 
               <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                <a href="./AI-ML Virtual Internship.pdf" class="btn btn-secondary" target="_blank">
+                <a href="./AI-ML Virtual Internship.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                   <i class="fas fa-certificate"></i> View Certificate
                 </a>
-                <a href="./AI-ML Virtual Internship Offer Letter.pdf" class="btn btn-secondary" target="_blank">
+                <a href="./AI-ML Virtual Internship Offer Letter.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                   <i class="fas fa-file-contract"></i> Offer Letter
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- Internship 2: Machine Learning & Data Science Virtual Internship (EduSkills / AICTE) -->
+          <!-- Internship 2: Machine Learning & Data Science Virtual Internship -->
           <div class="timeline-item" style="margin-bottom: 0;">
             <div>
               <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
@@ -492,10 +517,10 @@
               </ul>
 
               <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                <a href="./Machine Learning & Data Science Virtual Internship.pdf" class="btn btn-secondary" target="_blank">
+                <a href="./Machine Learning & Data Science Virtual Internship.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                   <i class="fas fa-certificate"></i> View Certificate
                 </a>
-                <a href="./Machine Learning & Data Science Virtual Internship Offer letter.pdf" class="btn btn-secondary" target="_blank">
+                <a href="./Machine Learning & Data Science Virtual Internship Offer letter.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                   <i class="fas fa-file-contract"></i> Offer Letter
                 </a>
               </div>
@@ -537,134 +562,92 @@
 
       <section id="certs">
         <h2 class="section-title">Certifications</h2>
+        <p style="max-width: 700px; margin: -25px auto 30px; text-align: center; color: #94a3b8;">Explore all certificates below. Each one is previewed here and can be opened in full size.</p>
         <div class="grid-3">
           
-          <div class="glass-card cert-card">
-            <div>
-              <i class="fas fa-award fa-lg" style="color: #6ee7ff; margin-bottom: 15px;"></i>
-              <h3 style="font-size: 1.1rem; margin-bottom: 6px;">Big Data Computing</h3>
-              <p style="font-size: 0.85rem; color: #94a3b8;">NPTEL Online Certification (IIT Kanpur)</p>
-            </div>
-            <a href="./NPTEL Online Certification (IIT Kanpur) BIG DATA COMPUTING.pdf" class="btn btn-secondary" style="margin-top:20px; justify-content: center;" target="_blank"><i class="fas fa-download"></i> Certificate</a>
-          </div>
+          <article class="glass-card cert-card">
+            <div><i class="fas fa-award fa-lg" style="color: #6ee7ff;" aria-hidden="true"></i><h3 style="font-size: 1.1rem; margin: 8px 0 4px;">Big Data Computing</h3><p style="font-size: 0.85rem; color: #94a3b8;">NPTEL Online Certification (IIT Kanpur)</p></div>
+            <iframe class="certificate-preview" src="./NPTEL Online Certification (IIT Kanpur) BIG DATA COMPUTING.pdf" title="Big Data Computing certificate preview" loading="lazy"></iframe>
+            <div class="certificate-actions"><a href="./NPTEL Online Certification (IIT Kanpur) BIG DATA COMPUTING.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-up-right-from-square"></i> Open certificate</a></div>
+          </article>
 
-          <div class="glass-card cert-card">
-            <div>
-              <i class="fas fa-cloud fa-lg" style="color: #6ee7ff; margin-bottom: 15px;"></i>
-              <h3 style="font-size: 1.1rem; margin-bottom: 6px;">Generative AI Foundations</h3>
-              <p style="font-size: 0.85rem; color: #94a3b8;">AWS Academy</p>
-            </div>
-            <a href="./AWSAcademy12NEW20260514-31-trdy1c.pdf" class="btn btn-secondary" style="margin-top:20px; justify-content: center;" target="_blank"><i class="fas fa-download"></i> Certificate</a>
-          </div>
+          <article class="glass-card cert-card">
+            <div><i class="fas fa-cloud fa-lg" style="color: #6ee7ff;" aria-hidden="true"></i><h3 style="font-size: 1.1rem; margin: 8px 0 4px;">Generative AI Foundations</h3><p style="font-size: 0.85rem; color: #94a3b8;">AWS Academy</p></div>
+            <iframe class="certificate-preview" src="./AWSAcademy12NEW20260514-31-trdy1c.pdf" title="AWS Academy Generative AI Foundations certificate preview" loading="lazy"></iframe>
+            <div class="certificate-actions"><a href="./AWSAcademy12NEW20260514-31-trdy1c.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-up-right-from-square"></i> Open certificate</a></div>
+          </article>
 
-          <div class="glass-card cert-card">
-            <div>
-              <i class="fas fa-brain fa-lg" style="color: #b084ff; margin-bottom: 15px;"></i>
-              <h3 style="font-size: 1.1rem; margin-bottom: 6px;">AWS Machine Learning</h3>
-              <p style="font-size: 0.85rem; color: #94a3b8;">AWS Academy</p>
-            </div>
-            <a href="./AWS_Academy_Graduate___Machine_Learning_Foundations___Training_Badge_Badge20260512-32-kdbdfp.pdf" class="btn btn-secondary" style="margin-top:20px; justify-content: center;" target="_blank"><i class="fas fa-download"></i> Certificate</a>
-          </div>
+          <article class="glass-card cert-card">
+            <div><i class="fas fa-brain fa-lg" style="color: #b084ff;" aria-hidden="true"></i><h3 style="font-size: 1.1rem; margin: 8px 0 4px;">AWS Machine Learning</h3><p style="font-size: 0.85rem; color: #94a3b8;">AWS Academy</p></div>
+            <iframe class="certificate-preview" src="./AWS_Academy_Graduate___Machine_Learning_Foundations___Training_Badge_Badge20260512-32-kdbdfp.pdf" title="AWS Machine Learning certificate preview" loading="lazy"></iframe>
+            <div class="certificate-actions"><a href="./AWS_Academy_Graduate___Machine_Learning_Foundations___Training_Badge_Badge20260512-32-kdbdfp.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-up-right-from-square"></i> Open certificate</a></div>
+          </article>
 
-          <div class="glass-card cert-card">
-            <div>
-              <i class="fas fa-brain fa-lg" style="color: #b084ff; margin-bottom: 15px;"></i>
-              <h3 style="font-size: 1.1rem; margin-bottom: 6px;">AWS Machine Learning for Natural
-Language Processing</h3>
-              <p style="font-size: 0.85rem; color: #94a3b8;">AWS Academy</p>
-            </div>
-            <a href="./AWS_Academy_Graduate___Machine_Learning_for_Natural_Language_Processing___Training_Badge_Badge20261103-20-vrdbou.pdf" class="btn btn-secondary" style="margin-top:20px; justify-content: center;" target="_blank"><i class="fas fa-download"></i> Certificate</a>
-          </div>
-          
-           <div class="glass-card cert-card">
-            <div>
-              <i class="fas fa-brain fa-lg" style="color: #b084ff; margin-bottom: 15px;"></i>
-              <h3 style="font-size: 1.1rem; margin-bottom: 6px;">Machine Learning With Python</h3>
-              <p style="font-size: 0.85rem; color: #94a3b8;">IBM Skills Build</p>
-            </div>
-            <a href="IBM ML0101EN Certificate _ IBM SkillsBuild.pdf" class="btn btn-secondary" style="margin-top:20px; justify-content: center;" target="_blank"><i class="fas fa-download"></i> Certificate</a>
-          </div>
-          
-          <div class="glass-card cert-card">
-            <div>
-              <i class="fas fa-cubes fa-lg" style="color: #6ee7ff; margin-bottom: 15px;"></i>
-              <h3 style="font-size: 1.1rem; margin-bottom: 6px;">Blockchain Technology</h3>
-              <p style="font-size: 0.85rem; color: #94a3b8;">NPTEL / University Specialization</p>
-            </div>
-            <a href="./BLOCKCHAIN.pdf" class="btn btn-secondary" style="margin-top:20px; justify-content: center;" target="_blank"><i class="fas fa-download"></i> Certificate</a>
-          </div>
+          <article class="glass-card cert-card">
+            <div><i class="fas fa-brain fa-lg" style="color: #b084ff;" aria-hidden="true"></i><h3 style="font-size: 1.1rem; margin: 8px 0 4px;">AWS ML for NLP</h3><p style="font-size: 0.85rem; color: #94a3b8;">AWS Academy</p></div>
+            <iframe class="certificate-preview" src="./AWS_Academy_Graduate___Machine_Learning_for_Natural_Language_Processing___Training_Badge_Badge20261103-20-vrdbou.pdf" title="AWS ML for NLP certificate preview" loading="lazy"></iframe>
+            <div class="certificate-actions"><a href="./AWS_Academy_Graduate___Machine_Learning_for_Natural_Language_Processing___Training_Badge_Badge20261103-20-vrdbou.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-up-right-from-square"></i> Open certificate</a></div>
+          </article>
 
-          <div class="glass-card cert-card">
-            <div>
-              <i class="fas fa-brain fa-lg" style="color: #b084ff; margin-bottom: 15px;"></i>
-              <h3 style="font-size: 1.1rem; margin-bottom: 6px;">ADVANCE EXCEL</h3>
-              <p style="font-size: 0.85rem; color: #94a3b8;">GREYLEARN</p>
-            </div>
-            <a href="ADVANCE EXCEL.pdf" class="btn btn-secondary" style="margin-top:20px; justify-content: center;" target="_blank"><i class="fas fa-download"></i> Certificate</a>
-          </div>
+          <article class="glass-card cert-card">
+            <div><i class="fas fa-brain fa-lg" style="color: #b084ff;" aria-hidden="true"></i><h3 style="font-size: 1.1rem; margin: 8px 0 4px;">Machine Learning With Python</h3><p style="font-size: 0.85rem; color: #94a3b8;">IBM Skills Build</p></div>
+            <iframe class="certificate-preview" src="IBM ML0101EN Certificate _ IBM SkillsBuild.pdf" title="IBM Machine Learning With Python certificate preview" loading="lazy"></iframe>
+            <div class="certificate-actions"><a href="IBM ML0101EN Certificate _ IBM SkillsBuild.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-up-right-from-square"></i> Open certificate</a></div>
+          </article>
 
-           <div class="glass-card cert-card">
-            <div>
-              <i class="fas fa-brain fa-lg" style="color: #b084ff; margin-bottom: 15px;"></i>
-              <h3 style="font-size: 1.1rem; margin-bottom: 6px;">C++ CERTIFICATE</h3>
-              <p style="font-size: 0.85rem; color: #94a3b8;">GREYLEARN</p>
-            </div>
-            <a href="C++ CERTIFICATE.pdf" class="btn btn-secondary" style="margin-top:20px; justify-content: center;" target="_blank"><i class="fas fa-download"></i> Certificate</a>
-          </div>
-          
-          <div class="glass-card cert-card">
-            <div>
-              <i class="fas fa-brain fa-lg" style="color: #b084ff; margin-bottom: 15px;"></i>
-              <h3 style="font-size: 1.1rem; margin-bottom: 6px;">Unlocking AI for Everyone (Beginner)</h3>
-              <p style="font-size: 0.85rem; color: #94a3b8;">NCVET Skill India</p>
-            </div>
-            <a href="Unlocking AI for Everyone (Beginner).pdf" class="btn btn-secondary" style="margin-top:20px; justify-content: center;" target="_blank"><i class="fas fa-download"></i> Certificate</a>
-          </div>
-          
-          <div class="glass-card cert-card">
-            <div>
-              <i class="fas fa-chart-line fa-lg" style="color: #b084ff; margin-bottom: 15px;"></i>
-              <h3 style="font-size: 1.1rem; margin-bottom: 6px;">NISM Certification</h3>
-              <p style="font-size: 0.85rem; color: #94a3b8;">Equity & Financial Markets</p>
-            </div>
-            <a href="./NISM Certificate.pdf" class="btn btn-secondary" style="margin-top:20px; justify-content: center;" target="_blank"><i class="fas fa-download"></i> Certificate</a>
-          </div>
+          <article class="glass-card cert-card">
+            <div><i class="fas fa-cubes fa-lg" style="color: #6ee7ff;" aria-hidden="true"></i><h3 style="font-size: 1.1rem; margin: 8px 0 4px;">Blockchain Technology</h3><p style="font-size: 0.85rem; color: #94a3b8;">NPTEL / University Specialization</p></div>
+            <iframe class="certificate-preview" src="./BLOCKCHAIN.pdf" title="Blockchain Technology certificate preview" loading="lazy"></iframe>
+            <div class="certificate-actions"><a href="./BLOCKCHAIN.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-up-right-from-square"></i> Open certificate</a></div>
+          </article>
 
-          <div class="glass-card cert-card">
-            <div>
-              <i class="fas fa-file-alt fa-lg" style="color: #6ee7ff; margin-bottom: 15px;"></i>
-              <h3 style="font-size: 1.1rem; margin-bottom: 6px;">Technical Writing</h3>
-              <p style="font-size: 0.85rem; color: #94a3b8;">Skill India Digital</p>
-            </div>
-            <a href="./Technical Writing certificate.pdf" class="btn btn-secondary" style="margin-top:20px; justify-content: center;" target="_blank"><i class="fas fa-download"></i> Certificate</a>
-          </div>
+          <article class="glass-card cert-card">
+            <div><i class="fas fa-table-cells-large fa-lg" style="color: #b084ff;" aria-hidden="true"></i><h3 style="font-size: 1.1rem; margin: 8px 0 4px;">Advanced Excel</h3><p style="font-size: 0.85rem; color: #94a3b8;">GREYLEARN</p></div>
+            <iframe class="certificate-preview" src="ADVANCE EXCEL.pdf" title="Advanced Excel certificate preview" loading="lazy"></iframe>
+            <div class="certificate-actions"><a href="ADVANCE EXCEL.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-up-right-from-square"></i> Open certificate</a></div>
+          </article>
 
-          <div class="glass-card cert-card">
-            <div>
-              <i class="fas fa-graduation-cap fa-lg" style="color: #b084ff; margin-bottom: 15px;"></i>
-              <h3 style="font-size: 1.1rem; margin-bottom: 6px;">Microsoft Excel</h3>
-              <p style="font-size: 0.85rem; color: #94a3b8;">Coursera Verified</p>
-            </div>
-            <a href="./Coursera ZLVS2QCNHUXJ.pdf" class="btn btn-secondary" style="margin-top:20px; justify-content: center;" target="_blank"><i class="fas fa-download"></i> Certificate</a>
-          </div>
+          <article class="glass-card cert-card">
+            <div><i class="fas fa-code fa-lg" style="color: #b084ff;" aria-hidden="true"></i><h3 style="font-size: 1.1rem; margin: 8px 0 4px;">C++ Programming</h3><p style="font-size: 0.85rem; color: #94a3b8;">GREYLEARN</p></div>
+            <iframe class="certificate-preview" src="C++ CERTIFICATE.pdf" title="C++ Programming certificate preview" loading="lazy"></iframe>
+            <div class="certificate-actions"><a href="C++ CERTIFICATE.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-up-right-from-square"></i> Open certificate</a></div>
+          </article>
 
-          <div class="glass-card cert-card">
-            <div>
-              <i class="fas fa-helicopter fa-lg" style="color: #6ee7ff; margin-bottom: 15px;"></i>
-              <h3 style="font-size: 1.1rem; margin-bottom: 6px;">Kisan Drone Operator</h3>
-              <p style="font-size: 0.85rem; color: #94a3b8;">Skill India Digital</p>
-            </div>
-            <a href="./Kisan Drone Operator.pdf" class="btn btn-secondary" style="margin-top:20px; justify-content: center;" target="_blank"><i class="fas fa-download"></i> Certificate</a>
-          </div>
+          <article class="glass-card cert-card">
+            <div><i class="fas fa-brain fa-lg" style="color: #b084ff;" aria-hidden="true"></i><h3 style="font-size: 1.1rem; margin: 8px 0 4px;">Unlocking AI for Everyone</h3><p style="font-size: 0.85rem; color: #94a3b8;">NCVET Skill India</p></div>
+            <iframe class="certificate-preview" src="Unlocking AI for Everyone (Beginner).pdf" title="Unlocking AI for Everyone certificate preview" loading="lazy"></iframe>
+            <div class="certificate-actions"><a href="Unlocking AI for Everyone (Beginner).pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-up-right-from-square"></i> Open certificate</a></div>
+          </article>
 
-          <div class="glass-card cert-card">
-            <div>
-              <i class="fas fa-bug fa-lg" style="color: #b084ff; margin-bottom: 15px;"></i>
-              <h3 style="font-size: 1.1rem; margin-bottom: 6px;">Software Test Engineer</h3>
-              <p style="font-size: 0.85rem; color: #94a3b8;">Skill India Digital</p>
-            </div>
-            <a href="./Software Test Engineer.pdf" class="btn btn-secondary" style="margin-top:20px; justify-content: center;" target="_blank"><i class="fas fa-download"></i> Certificate</a>
-          </div>
+          <article class="glass-card cert-card">
+            <div><i class="fas fa-chart-line fa-lg" style="color: #b084ff;" aria-hidden="true"></i><h3 style="font-size: 1.1rem; margin: 8px 0 4px;">NISM Certification</h3><p style="font-size: 0.85rem; color: #94a3b8;">Equity &amp; Financial Markets</p></div>
+            <iframe class="certificate-preview" src="./NISM Certificate.pdf" title="NISM Certification certificate preview" loading="lazy"></iframe>
+            <div class="certificate-actions"><a href="./NISM Certificate.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-up-right-from-square"></i> Open certificate</a></div>
+          </article>
+
+          <article class="glass-card cert-card">
+            <div><i class="fas fa-file-alt fa-lg" style="color: #6ee7ff;" aria-hidden="true"></i><h3 style="font-size: 1.1rem; margin: 8px 0 4px;">Technical Writing</h3><p style="font-size: 0.85rem; color: #94a3b8;">Skill India Digital</p></div>
+            <iframe class="certificate-preview" src="./Technical Writing certificate.pdf" title="Technical Writing certificate preview" loading="lazy"></iframe>
+            <div class="certificate-actions"><a href="./Technical Writing certificate.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-up-right-from-square"></i> Open certificate</a></div>
+          </article>
+
+          <article class="glass-card cert-card">
+            <div><i class="fas fa-graduation-cap fa-lg" style="color: #b084ff;" aria-hidden="true"></i><h3 style="font-size: 1.1rem; margin: 8px 0 4px;">Microsoft Excel</h3><p style="font-size: 0.85rem; color: #94a3b8;">Coursera Verified</p></div>
+            <iframe class="certificate-preview" src="./Coursera ZLVS2QCNHUXJ.pdf" title="Coursera Microsoft Excel certificate preview" loading="lazy"></iframe>
+            <div class="certificate-actions"><a href="./Coursera ZLVS2QCNHUXJ.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-up-right-from-square"></i> Open certificate</a></div>
+          </article>
+
+          <article class="glass-card cert-card">
+            <div><i class="fas fa-helicopter fa-lg" style="color: #6ee7ff;" aria-hidden="true"></i><h3 style="font-size: 1.1rem; margin: 8px 0 4px;">Kisan Drone Operator</h3><p style="font-size: 0.85rem; color: #94a3b8;">Skill India Digital</p></div>
+            <iframe class="certificate-preview" src="./Kisan Drone Operator.pdf" title="Kisan Drone Operator certificate preview" loading="lazy"></iframe>
+            <div class="certificate-actions"><a href="./Kisan Drone Operator.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-up-right-from-square"></i> Open certificate</a></div>
+          </article>
+
+          <article class="glass-card cert-card">
+            <div><i class="fas fa-bug fa-lg" style="color: #b084ff;" aria-hidden="true"></i><h3 style="font-size: 1.1rem; margin: 8px 0 4px;">Software Test Engineer</h3><p style="font-size: 0.85rem; color: #94a3b8;">Skill India Digital</p></div>
+            <iframe class="certificate-preview" src="./Software Test Engineer.pdf" title="Software Test Engineer certificate preview" loading="lazy"></iframe>
+            <div class="certificate-actions"><a href="./Software Test Engineer.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-up-right-from-square"></i> Open certificate</a></div>
+          </article>
 
         </div>
       </section>
@@ -699,7 +682,7 @@ Language Processing</h3>
             </div>
             <div style="margin-top:24px; display: flex; gap: 10px;">
               <a href="https://github.com/hridyeshpandey4680-blip/healthcare-risk-predictor" class="btn btn-secondary" style="padding: 8px 16px; flex: 1; justify-content: center;" target="_blank"><i class="fab fa-github"></i> Code</a> 
-              <a href="https://healthcare-risk-predictor-asei79so4n6jwup4tdrwzz.streamlit.app" class="btn btn-primary" style="padding: 8px 16px; flex: 1; justify-content: center;"><i class="fas fa-external-link-alt"></i> Demo</a>
+              <a href="https://healthcare-risk-predictor-asei79so4n6jwup4tdrwzz.streamlit.app" class="btn btn-primary" style="padding: 8px 16px; flex: 1; justify-content: center;" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
             </div>
           </div>
 
@@ -714,7 +697,7 @@ Language Processing</h3>
             </div>
             <div style="margin-top:24px; display: flex; gap: 10px;">
               <a href="https://github.com/hridyeshpandey4680-blip/House-price-prediction" class="btn btn-secondary" style="padding: 8px 16px; flex: 1; justify-content: center;" target="_blank"><i class="fab fa-github"></i> Code</a> 
-              <a href="https://house-price-prediction-d88hedyy8vigt2ya3eyli5.streamlit.app" class="btn btn-primary" style="padding: 8px 16px; flex: 1; justify-content: center;"><i class="fas fa-external-link-alt"></i> Demo</a>
+              <a href="https://house-price-prediction-d88hedyy8vigt2ya3eyli5.streamlit.app" class="btn btn-primary" style="padding: 8px 16px; flex: 1; justify-content: center;" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
             </div>
           </div>
 
@@ -729,7 +712,7 @@ Language Processing</h3>
             </div>
             <div style="margin-top:24px; display: flex; gap: 10px;">
               <a href="https://github.com/hridyeshpandey4680-blip/Mind-Prediction" class="btn btn-secondary" style="padding: 8px 16px; flex: 1; justify-content: center;" target="_blank"><i class="fab fa-github"></i> Code</a> 
-              <a href="https://mind-prediction-rkhtpvf4a7zcyor2rmbjng.streamlit.app" class="btn btn-primary" style="padding: 8px 16px; flex: 1; justify-content: center;"><i class="fas fa-external-link-alt"></i> Demo</a>
+              <a href="https://mind-prediction-rkhtpvf4a7zcyor2rmbjng.streamlit.app" class="btn btn-primary" style="padding: 8px 16px; flex: 1; justify-content: center;" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
             </div>
           </div>
 
@@ -766,82 +749,82 @@ Language Processing</h3>
           </div>
 
           <div style="display: flex; gap: 16px; justify-content: center; margin-bottom: 35px; flex-wrap: wrap;">
-            <a href="https://www.linkedin.com/in/hridyesh-kumar-pandey-2934a4395/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BRt4U3W41SlW8jAFBksIa0A%3D%3D" class="btn btn-secondary" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://www.linkedin.com/in/hridyesh-kumar-pandey-2934a4395/" class="btn btn-secondary" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             <a href="https://github.com/hridyeshpandey4680-blip" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
             <a href="https://wa.me/919430240185" class="btn btn-secondary" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
           </div>
 
           <!-- Contact Section Form -->
-<form action="https://api.web3forms.com/submit" method="POST" id="portfolio-form">
-    
-    <input type="hidden" name="access_key" value="dcdc3665-ed48-43c6-a966-949041002f1e">
-    
-    <input type="hidden" name="redirect" value="">
+          <form action="https://api.web3forms.com/submit" method="POST" id="portfolio-form">
+            <input type="hidden" name="access_key" value="dcdc3665-ed48-43c6-a966-949041002f1e">
+            <input type="hidden" name="redirect" value="">
 
-    <div class="form-group" style="margin-bottom: 15px;">
-        <label for="name" style="display: block; color: #fff; margin-bottom: 5px;">Name</label>
-        <input type="text" id="name" name="name" required placeholder="Your Name" style="width: 100%; padding: 10px; background: #111; color: #fff; border: 1px solid #333; border-radius: 5px;">
+            <div class="form-group" style="margin-bottom: 15px;">
+                <label for="name" style="display: block; color: #fff; margin-bottom: 5px;">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name" style="width: 100%; padding: 10px; background: #111; color: #fff; border: 1px solid #333; border-radius: 5px;">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 15px;">
+                <label for="email" style="display: block; color: #fff; margin-bottom: 5px;">Email</label>
+                <input type="email" id="email" name="email" required placeholder="yourname@gmail.com" style="width: 100%; padding: 10px; background: #111; color: #fff; border: 1px solid #333; border-radius: 5px;">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label for="message" style="display: block; color: #fff; margin-bottom: 5px;">Message</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Write your message here..." style="width: 100%; padding: 10px; background: #111; color: #fff; border: 1px solid #333; border-radius: 5px; resize: none;"></textarea>
+            </div>
+
+            <button type="submit" style="width: 100%; padding: 12px; background: #5c5470; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold;">
+                Send Message
+            </button>
+          </form>
+
+          <script>
+          const form = document.getElementById('portfolio-form');
+
+          form.addEventListener('submit', function(e) {
+              e.preventDefault();
+              const formData = new FormData(form);
+              const object = Object.fromEntries(formData);
+              const json = JSON.stringify(object);
+
+              const btn = form.querySelector('button');
+              btn.innerHTML = "Sending...";
+              btn.disabled = true;
+
+              fetch('https://api.web3forms.com/submit', {
+                      method: 'POST',
+                      headers: {
+                          'Content-Type': 'application/json',
+                          'Accept': 'application/json'
+                      },
+                      body: json
+                  })
+                  .then(async (response) => {
+                      let json = await response.json();
+                      if (response.status == 200) {
+                          alert("🚀 Message processed successfully!");
+                          form.reset();
+                      } else {
+                          console.log(response);
+                          alert("Kuch gadbad hui: " + json.message);
+                      }
+                  })
+                  .catch(error => {
+                      console.log(error);
+                      alert("Network error! Baad me try karein.");
+                  })
+                  .then(function() {
+                      btn.innerHTML = "Send Message";
+                      btn.disabled = false;
+                  });
+          });
+          </script>
+        </div>
+      </section>
+
+      <footer>© 2026 Hridyesh Kumar Pandey | AI & ML Portfolio.</footer>
     </div>
-
-    <div class="form-group" style="margin-bottom: 15px;">
-        <label for="email" style="display: block; color: #fff; margin-bottom: 5px;">Email</label>
-        <input type="email" id="email" name="email" required placeholder="yourname@gmail.com" style="width: 100%; padding: 10px; background: #111; color: #fff; border: 1px solid #333; border-radius: 5px;">
-    </div>
-
-    <div class="form-group" style="margin-bottom: 20px;">
-        <label for="message" style="display: block; color: #fff; margin-bottom: 5px;">Message</label>
-        <textarea id="message" name="message" rows="5" required placeholder="Write your message here..." style="width: 100%; padding: 10px; background: #111; color: #fff; border: 1px solid #333; border-radius: 5px; resize: none;"></textarea>
-    </div>
-
-    <button type="submit" style="width: 100%; padding: 12px; background: #5c5470; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold;">
-        Send Message
-    </button>
-</form>
-
-<script>
-const form = document.getElementById('portfolio-form');
-
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const formData = new FormData(form);
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-
-    const btn = form.querySelector('button');
-    btn.innerHTML = "Sending...";
-    btn.disabled = true;
-
-    fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: json
-        })
-        .then(async (response) => {
-            let json = await response.json();
-            if (response.status == 200) {
-                alert("🚀 Message processed successfully!");
-                form.reset();
-            } else {
-                console.log(response);
-                alert("Kuch gadbad hui: " + json.message);
-            }
-        })
-        .catch(error => {
-            console.log(error);
-            alert("Network error! Baad me try karein.");
-        })
-        .then(function() {
-            btn.innerHTML = "Send Message";
-            btn.disabled = false;
-        });
-});
-</script>
-        
-    </div>
-    <footer>© 2026 Hridyesh Kumar Pandey | AI & ML Portfolio.</footer>
   </div>
 
   <script>
